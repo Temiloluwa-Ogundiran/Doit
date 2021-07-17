@@ -77,7 +77,7 @@ class App extends React.Component {
 
     var url = "https://doitodo.herokuapp.com/api/task-create/";
 
-    if (this.state.editing == true) {
+    if (this.state.editing === true) {
       url = `https://doitodo.herokuapp.com/api/task-update/${this.state.activeItem.id}/`;
       this.setState({
         editing: false,
@@ -188,7 +188,7 @@ class App extends React.Component {
                     onClick={() => self.strikeUnstrike(task)}
                     style={{ flex: 7 }}
                   >
-                    {task.completed == false ? (
+                    {task.completed === false ? (
                       <span>{task.title}</span>
                     ) : (
                       <strike>{task.title}</strike>
